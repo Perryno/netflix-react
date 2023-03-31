@@ -1,0 +1,59 @@
+.left img {
+  width: 120px;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 600;
+  color: #b8b8b8;
+}
+
+.left .selected {
+  color: #fff;
+}
+.app {
+  background-color: #141414;
+}
+
+.topBar {
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.right {
+  display: flex;
+  color: #fff;
+  align-items: center;
+  gap: 1rem;
+}
+
+.TopIcon {
+  font-size: 1.3rem;
+}
+
+.white {
+  color: #fff;
+}
+
+.border {
+  border-radius: 0;
+  border: 1px solid white;
+}
+.secTop {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Shows {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+#TvShows {
+  color: #fff;
+  font-size: 2rem;
+}
