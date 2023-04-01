@@ -20,11 +20,15 @@ class Films extends React.Component {
   };
 
   render() {
+    const { elements } = this.state;
     return (
       <div>
-        {this.state.elements.Search.map((item) => (
-          <li key={item.id}>{item.Title}</li>
-        ))}
+        {elements.Search &&
+          elements.Search.map((element) => (
+            <div key={element.imdbID}>
+              <div>{element.Title}</div>
+            </div>
+          ))}
       </div>
     );
   }
