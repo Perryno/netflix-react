@@ -1,14 +1,16 @@
 import React from "react";
+
 class Films extends React.Component {
   state = {
-    reservations: []
+    elements: []
   };
   componentDidMount = async () => {
     try {
-      const response = await fetch("http://www.omdbapi.com/?i=tt3896198&apikey=327719c0");
+      const response = await fetch("http://www.omdbapi.com/?s=american+pie&apikey=327719c0");
       if (response.ok) {
         const data = await response.json();
-        this.setState({ reservations: data });
+        console.log(data);
+        this.setState({ elements: data });
       } else {
         console.log("error while fetching");
       }
@@ -20,7 +22,9 @@ class Films extends React.Component {
   render() {
     return (
       <div>
-        <div>ciao</div>
+        {this.state.elements.Search.map((item) => (
+          <li key={item.id}>{item.Title}</li>
+        ))}
       </div>
     );
   }
