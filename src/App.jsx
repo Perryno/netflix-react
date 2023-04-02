@@ -1,7 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "./App.css";
-import { Container } from "react-bootstrap";
 
 import MyTopBar from "./components/MyTopBar";
 import TvShows from "./components/TvShows";
@@ -11,12 +10,14 @@ import Films from "./components/Films";
 function App() {
   return (
     <div className="app">
-      <Container>
-        <MyTopBar />
-        <TvShows />
-        <Shows text="Trending Now" />
-        <Films />
-      </Container>
+      <MyTopBar />
+      <TvShows />
+      <Shows text="Fast and Furious" />
+      <Films search="fast+and+furious" />
+      <Shows text="Twilight" />
+      <Films search="twilight" />
+      <Shows text="Harry potter" />
+      <Films search="harry+potter" />
     </div>
   );
 }
